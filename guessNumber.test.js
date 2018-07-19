@@ -13,6 +13,11 @@ describe('guessNumber',function () {
         expect(new guessNumber().test("4 3 2 1")).toEqual("0A4B")
     });
 
+    it('should return 3A0B for input 1 5 3 9 when anwser is 1 2 3 4',function () {
+        expect(new guessNumber().test("1 8 3 2")).toEqual("2A1B")
+    });
+
+
 
 });
 

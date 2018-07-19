@@ -6,7 +6,6 @@ class guessNumber {
         var a = 0, b = 0;
         var realNumber = [1,2,3,4];
         var userInput = input.split(" ").map(ele=>+ele);
-        console.log(userInput);
         for (var item of userInput) {
             if (realNumber.indexOf(item) >= 0) b++;
         }
