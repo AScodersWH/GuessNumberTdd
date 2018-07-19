@@ -3,14 +3,20 @@ class guessNumber {
     }
 
     test(input) {
-        const answer = [1,2,3,4];
-        let numberOfA = 0;
-        for(let item of input.split(" ")){
-            if(answer.indexOf(+item)>=0) {
-                numberOfA++;
-            }
+        var a = 0, b = 0;
+        var realNumber = [1,2,3,4];
+        var userInput = input.split(" ").map(ele=>+ele);
+        console.log(userInput);
+        for (var item of userInput) {
+            if (realNumber.indexOf(item) >= 0) b++;
         }
-        return `${numberOfA}A0B`;
+
+        for (var ite = 0; ite < 4; ite++) {
+            if (userInput[ite] == realNumber[ite]) a++;
+        }
+        const result = `${a}A${(b-a)}B`;
+
+        return result;
     }
 }
 
